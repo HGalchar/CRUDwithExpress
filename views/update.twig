@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Update</title>	
+	</head>
+    <style>
+    h1{
+        color:DodgerBlue;
+    }
+    form{   background-color: #FAACA8;
+            background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+            border:1px solid;
+           
+        }
+    table{
+        background-color: #8EC5FC;
+        background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+         
+    }
+    button{
+        size:100%
+        background-color: green;
+    }
+    #btn1{
+        margin-top:25px;
+    }
+    
+        #btn {
+        background-color: #21D4FD;
+        background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+        border:1px solid;
+        color: white;
+        padding: 15px 28px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        }
+        input,select{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            }
+        
+
+    </style>
+	<body>
+    <center>
+    <h1>Update Data</h1>
+   
+    <form action="/update" method="POST">
+        <table>
+        <input type="hidden" name="id" value="{{data._id}}">
+         
+        <td>Name:</td><td><input name="name" id="name" type="text" value="{{data.name}}"></td></tr>
+        <td>Email:</td><td><input name="email" id="email" type="email" placeholder="Email" value="{{data.email}}"></td></tr>
+        <td>Department:</td>
+        <td><select name="dept" id="dept">
+                <option>{{data.dept}}</option>
+				<option>Manufacturing</option>
+				<option>Shipping</option>
+				<option>Administration</option>
+				<option>Human Resources</option>
+			</select></td></tr>
+        <td>Message:</td><td><input name="message" rows="6" value="{{data.message}}"></td></tr>
+        <td></td><td><button id="btn">UPDATE</button></td> 
+        
+    </table>
+       
+    </form>
+     <button id="btn1"><a href="/show">Show Your Data</a></button>
+    </center>
+            
+								
+	</body>
+</html>
